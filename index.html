@@ -17,10 +17,23 @@
 
         html,
         body {
+            position: relative;
             background-image: url('https://logincdn.msauth.net/shared/1.0/content/images/backgrounds/2_11d9e3bcdfede9ce5ce5ace2d129f1c4.svg');
             background-repeat: no-repeat;
-            background-size: cover; /* Adjust as needed */
+            background-size: cover;
             color: #1b1b1b;
+        }
+        
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5); /* Adjust transparency */
+            backdrop-filter: blur(5px); /* Optional blur effect */
+            z-index: -1;
         }
 
         section {
